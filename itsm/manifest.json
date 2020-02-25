@@ -1,0 +1,21 @@
+{
+
+    "manifest_version": 2,
+    "name": "ESC ITSM Search",
+    "version": "1.0.0",
+  
+    "description": "Adds a search helper for ITSM to Firefox.\n\nStart a query by pressing 'e', enter the ticket reference, or enter a blank search to create a new incident.",
+  
+    "background": 
+      {
+        "scripts": ["itsmsearch.js"]
+      },
+  
+    "icons": {
+        "48": "icon-48.png"
+    },
+    
+    "omnibox": {
+        "keyword": "e"
+    }
+  }

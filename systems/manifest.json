@@ -1,0 +1,34 @@
+{
+
+    "manifest_version": 2,
+    "name": "DeviceSearchTool Search",
+    "version": "0.1",
+  
+    "description": "Adds a search helper for DeviceSearchTool to Firefox. Start a query by pressing 's' then enter the device name. Extension only guaranteed to work as smoothly as DeviceSearchTool allows.",
+  
+    "icons": {
+        "48": "icon-48.png"
+    },
+    
+    "content_scripts": [
+      {
+        "matches": ["*://DOMAINNAMEREMOVED/*"],
+        "js": ["search.js"]
+      }
+    ],
+
+    "omnibox": {
+        "keyword": "s"
+    },
+
+    "background": 
+    {
+      "scripts": ["search.js"]
+    },
+
+    "permissions": [
+      "*://DOMAINNAMEREMOVED/*",
+      "tabs",
+      "activeTab"
+    ]
+  }
